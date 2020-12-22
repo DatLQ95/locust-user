@@ -5,10 +5,10 @@ from locust import LoadTestShape
 class OdooUser(HttpUser):
     @task(1)
     def hello_world(self):
-        self.client.get("/contactus")
+        self.client.get("/")
     @task(2)
     def view_item(self):
-        self.client.get("/shop")
+        self.client.get("/")
 
     def on_start(self):
         self.client.get("")
